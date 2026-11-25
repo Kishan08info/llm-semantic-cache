@@ -1,0 +1,320 @@
+{
+  "near_misses": [
+    {
+      "id": "n01",
+      "question": "What is the monthly price of the Team plan?",
+      "base_id": null,
+      "expect": "miss",
+      "answer": "We do not offer a Team plan \u2014 our plans are Starter ($29), Growth ($79), Pro ($149), and Enterprise (custom).",
+      "note": "No Team plan exists; resembles the plan-price questions."
+    },
+    {
+      "id": "n02",
+      "question": "What is the API rate limit on the Enterprise plan?",
+      "base_id": null,
+      "expect": "miss",
+      "answer": "Enterprise API limits are set per contract \u2014 contact sales.",
+      "note": "No Enterprise limit in the knowledge base; resembles q05/q06."
+    },
+    {
+      "id": "n03",
+      "question": "How do I downgrade my plan?",
+      "base_id": null,
+      "expect": "miss",
+      "answer": "Go to Settings > Billing > Change plan and pick a lower plan. The downgrade applies at the end of the billing period.",
+      "note": "Downgrade is a different action from upgrade/cancel."
+    },
+    {
+      "id": "n04",
+      "question": "How many team seats does the Growth plan include?",
+      "base_id": null,
+      "expect": "miss",
+      "answer": "The Growth plan includes 10 team seats.",
+      "note": "Growth seats are not in the knowledge base; resembles q11/q12."
+    },
+    {
+      "id": "n05",
+      "question": "How fast is support on the Growth plan?",
+      "base_id": null,
+      "expect": "miss",
+      "answer": "Growth support responds within 8 business hours.",
+      "note": "Growth support time is not in the knowledge base; resembles q14/q15."
+    },
+    {
+      "id": "n06",
+      "question": "What is the annual price of the Starter plan?",
+      "base_id": null,
+      "expect": "miss",
+      "answer": "Starter is $29 per month; paid annually it is $278.40 per year after the 20% discount.",
+      "note": "Only the monthly price is cached; annual price must be computed."
+    },
+    {
+      "id": "n07",
+      "question": "What is the uptime SLA on the Starter plan?",
+      "base_id": null,
+      "expect": "miss",
+      "answer": "There is no uptime SLA on the Starter plan \u2014 the 99.9% SLA applies to Pro and Enterprise.",
+      "note": "Shares uptime/SLA tokens with q18 but the answer is the opposite."
+    },
+    {
+      "id": "n08",
+      "question": "Is SSO with SAML available on the Starter plan?",
+      "base_id": null,
+      "expect": "miss",
+      "answer": "No \u2014 SSO with SAML is available on Pro and Enterprise only.",
+      "note": "Shares SSO/SAML tokens with q13 but the answer is No."
+    },
+    {
+      "id": "n09",
+      "question": "Are audit logs available on the Pro plan?",
+      "base_id": null,
+      "expect": "miss",
+      "answer": "No \u2014 audit logs are available on the Enterprise plan only.",
+      "note": "Shares audit-log tokens with q21 but the answer is No."
+    },
+    {
+      "id": "n10",
+      "question": "How long is data kept after I upgrade?",
+      "base_id": null,
+      "expect": "miss",
+      "answer": "Upgrading does not delete data \u2014 data is kept for 90 days only after cancellation.",
+      "note": "Mixes retention with upgrade; no such cached entry."
+    },
+    {
+      "id": "n11",
+      "question": "What is the free trial for the Enterprise plan?",
+      "base_id": null,
+      "expect": "miss",
+      "answer": "Enterprise trials are arranged with sales \u2014 the self-serve 14-day trial includes Growth features.",
+      "note": "Shares trial tokens with q10 but Enterprise trials differ."
+    },
+    {
+      "id": "n12",
+      "question": "Can I export my data as JSON?",
+      "base_id": null,
+      "expect": "miss",
+      "answer": "Exports are CSV only \u2014 JSON export is not available.",
+      "note": "Shares export tokens with q16 but the answer is No."
+    }
+  ],
+  "paraphrases": [
+    {
+      "base_id": "q01",
+      "expect": "hit",
+      "id": "p01",
+      "question": "How much does the Starter plan cost each month?"
+    },
+    {
+      "base_id": "q02",
+      "expect": "hit",
+      "id": "p02",
+      "question": "What does Growth cost per month?"
+    },
+    {
+      "base_id": "q03",
+      "expect": "hit",
+      "id": "p03",
+      "question": "How much is the Pro plan monthly?"
+    },
+    {
+      "base_id": "q04",
+      "expect": "hit",
+      "id": "p04",
+      "question": "What is Enterprise pricing?"
+    },
+    {
+      "base_id": "q05",
+      "expect": "hit",
+      "id": "p05",
+      "question": "What is the daily API limit on Starter?"
+    },
+    {
+      "base_id": "q06",
+      "expect": "hit",
+      "id": "p06",
+      "question": "What is the daily API limit for Pro?"
+    },
+    {
+      "base_id": "q07",
+      "expect": "hit",
+      "id": "p07",
+      "question": "How can I cancel my subscription?"
+    },
+    {
+      "base_id": "q08",
+      "expect": "hit",
+      "id": "p08",
+      "question": "How can I change to a higher plan?"
+    },
+    {
+      "base_id": "q09",
+      "expect": "hit",
+      "id": "p09",
+      "question": "Can I get my money back if I cancel?"
+    },
+    {
+      "base_id": "q10",
+      "expect": "hit",
+      "id": "p10",
+      "question": "How many days does the free trial last?"
+    },
+    {
+      "base_id": "q11",
+      "expect": "hit",
+      "id": "p11",
+      "question": "How many seats come with Starter?"
+    },
+    {
+      "base_id": "q12",
+      "expect": "hit",
+      "id": "p12",
+      "question": "What is the team seat limit on Pro?"
+    },
+    {
+      "base_id": "q13",
+      "expect": "hit",
+      "id": "p13",
+      "question": "Do you support SAML single sign-on?"
+    },
+    {
+      "base_id": "q14",
+      "expect": "hit",
+      "id": "p14",
+      "question": "What is the support response time for Starter?"
+    },
+    {
+      "base_id": "q15",
+      "expect": "hit",
+      "id": "p15",
+      "question": "How quickly does Pro support reply?"
+    },
+    {
+      "base_id": "q16",
+      "expect": "hit",
+      "id": "p16",
+      "question": "Can I download my data as a CSV?"
+    },
+    {
+      "base_id": "q17",
+      "expect": "hit",
+      "id": "p17",
+      "question": "How much do I save paying yearly?"
+    },
+    {
+      "base_id": "q18",
+      "expect": "hit",
+      "id": "p18",
+      "question": "What uptime do you guarantee?"
+    },
+    {
+      "base_id": "q19",
+      "expect": "hit",
+      "id": "p19",
+      "question": "Is my data stored in the US or EU?"
+    },
+    {
+      "base_id": "q20",
+      "expect": "hit",
+      "id": "p20",
+      "question": "I forgot my password, how do I get back in?"
+    },
+    {
+      "base_id": "q21",
+      "expect": "hit",
+      "id": "p21",
+      "question": "Can I see audit logs?"
+    },
+    {
+      "base_id": "q22",
+      "expect": "hit",
+      "id": "p22",
+      "question": "Do you delete my data after I cancel?"
+    },
+    {
+      "base_id": "q23",
+      "expect": "hit",
+      "id": "p23",
+      "question": "Am I locked into a contract?"
+    },
+    {
+      "base_id": "q24",
+      "expect": "hit",
+      "id": "p24",
+      "question": "Are you SOC 2 certified?"
+    }
+  ],
+  "unrelated": [
+    {
+      "base_id": null,
+      "expect": "miss",
+      "id": "u01",
+      "question": "Who is the CEO of Northwind?"
+    },
+    {
+      "base_id": null,
+      "expect": "miss",
+      "id": "u02",
+      "question": "What is the weather like in San Diego today?"
+    },
+    {
+      "base_id": null,
+      "expect": "miss",
+      "id": "u03",
+      "question": "What is the capital of France?"
+    },
+    {
+      "base_id": null,
+      "expect": "miss",
+      "id": "u04",
+      "question": "Are you hiring engineers?"
+    },
+    {
+      "base_id": null,
+      "expect": "miss",
+      "id": "u05",
+      "question": "Where is your head office?"
+    },
+    {
+      "base_id": null,
+      "expect": "miss",
+      "id": "u06",
+      "question": "What time is the all-hands meeting?"
+    },
+    {
+      "base_id": null,
+      "expect": "miss",
+      "id": "u07",
+      "question": "How do I bake sourdough bread?"
+    },
+    {
+      "base_id": null,
+      "expect": "miss",
+      "id": "u08",
+      "question": "What is the stock price of Northwind?"
+    },
+    {
+      "base_id": null,
+      "expect": "miss",
+      "id": "u09",
+      "question": "Can you book me a flight to New York?"
+    },
+    {
+      "base_id": null,
+      "expect": "miss",
+      "id": "u10",
+      "question": "What is the meaning of life?"
+    },
+    {
+      "base_id": null,
+      "expect": "miss",
+      "id": "u11",
+      "question": "How many employees work at Northwind?"
+    },
+    {
+      "base_id": null,
+      "expect": "miss",
+      "id": "u12",
+      "question": "Tell me a joke about databases."
+    }
+  ]
+}

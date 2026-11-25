@@ -1,0 +1,62 @@
+{
+  "volatile_ttl_s": 2,
+  "default_ttl_s": 3600,
+  "events": [
+    {
+      "step": "1. first ask",
+      "question": "What is the monthly price of the Growth plan?",
+      "outcome": "miss -> LLM",
+      "answer": "The Growth plan costs $79 per month.",
+      "similarity": 0.0
+    },
+    {
+      "step": "2. paraphrase, price unchanged",
+      "question": "What does Growth cost per month?",
+      "outcome": "semantic hit",
+      "answer": "The Growth plan costs $79 per month.",
+      "similarity": 0.866
+    },
+    {
+      "step": "3. world changes",
+      "question": "\u2014",
+      "outcome": "mock LLM: Growth price $79 -> $99",
+      "answer": null,
+      "similarity": 0.0
+    },
+    {
+      "step": "4. paraphrase inside volatile TTL (stale $79 served)",
+      "question": "What does Growth cost per month?",
+      "outcome": "semantic hit",
+      "answer": "The Growth plan costs $79 per month.",
+      "similarity": 0.866
+    },
+    {
+      "step": "5. paraphrase after volatile TTL expired",
+      "question": "What does Growth cost per month?",
+      "outcome": "miss -> LLM",
+      "answer": "The Growth plan costs $99 per month.",
+      "similarity": 0.0
+    },
+    {
+      "step": "6. paraphrase again (fresh $99 cached)",
+      "question": "What does Growth cost per month?",
+      "outcome": "exact hit",
+      "answer": "The Growth plan costs $99 per month.",
+      "similarity": 1.0
+    },
+    {
+      "step": "7. non-volatile entry cached before the wait",
+      "question": "How do I cancel my subscription?",
+      "outcome": "miss -> LLM",
+      "answer": "Go to Settings > Billing > Cancel subscription. Your plan stays active until the end of the billing period.",
+      "similarity": 0.0
+    },
+    {
+      "step": "8. non-volatile paraphrase after the wait (still cached)",
+      "question": "How can I cancel my subscription?",
+      "outcome": "exact hit",
+      "answer": "Go to Settings > Billing > Cancel subscription. Your plan stays active until the end of the billing period.",
+      "similarity": 1.0
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "workload": "24 base + 24 paraphrases + 12 near-misses + 12 unrelated, shuffled seed 42",
+  "threshold": 0.6,
+  "uncached": {
+    "questions": 72,
+    "wall_clock_s": 10.814,
+    "llm_calls": 72,
+    "modelled_cost_usd": 0.144
+  },
+  "cached": {
+    "questions": 72,
+    "wall_clock_s": 4.079,
+    "llm_calls": 27,
+    "llm_calls_avoided": 45,
+    "exact_hits": 26,
+    "semantic_hits": 19,
+    "misses": 27,
+    "hit_rate": 0.625,
+    "wrong_hits": [
+      {
+        "question": "What is the annual price of the Starter plan?",
+        "served": "What is the monthly price of the Starter plan?",
+        "similarity": 0.624
+      }
+    ],
+    "wrong_hit_count": 1,
+    "modelled_latency_saved_s": 6.75,
+    "modelled_cost_saved_usd": 0.09,
+    "cache_size": 51
+  },
+  "calls_saved": 45,
+  "wall_clock_saved_s": 6.735
+}

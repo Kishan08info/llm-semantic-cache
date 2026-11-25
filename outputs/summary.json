@@ -1,0 +1,114 @@
+{
+  "project": "llm-semantic-cache",
+  "workload_questions": 72,
+  "threshold_default": 0.6,
+  "demo": {
+    "llm_calls_without_cache": 72,
+    "llm_calls_with_cache": 27,
+    "llm_calls_avoided": 45,
+    "exact_hits": 26,
+    "semantic_hits": 19,
+    "misses": 27,
+    "hit_rate": 0.625,
+    "wrong_hits": 1,
+    "modelled_latency_saved_s": 6.75,
+    "modelled_cost_saved_usd": 0.09
+  },
+  "threshold_sweep": {
+    "0.6": {
+      "paraphrase_hit_rate": 0.8333,
+      "paraphrase_hits": 20,
+      "paraphrase_wrong_hits": 0,
+      "near_miss_false_hit_rate": 0.0833,
+      "near_miss_false_hits": 1,
+      "unrelated_false_hit_rate": 0.0,
+      "unrelated_false_hits": 0
+    },
+    "0.7": {
+      "paraphrase_hit_rate": 0.4583,
+      "paraphrase_hits": 11,
+      "paraphrase_wrong_hits": 0,
+      "near_miss_false_hit_rate": 0.0,
+      "near_miss_false_hits": 0,
+      "unrelated_false_hit_rate": 0.0,
+      "unrelated_false_hits": 0
+    },
+    "0.8": {
+      "paraphrase_hit_rate": 0.2917,
+      "paraphrase_hits": 7,
+      "paraphrase_wrong_hits": 0,
+      "near_miss_false_hit_rate": 0.0,
+      "near_miss_false_hits": 0,
+      "unrelated_false_hit_rate": 0.0,
+      "unrelated_false_hits": 0
+    },
+    "0.85": {
+      "paraphrase_hit_rate": 0.2917,
+      "paraphrase_hits": 7,
+      "paraphrase_wrong_hits": 0,
+      "near_miss_false_hit_rate": 0.0,
+      "near_miss_false_hits": 0,
+      "unrelated_false_hit_rate": 0.0,
+      "unrelated_false_hits": 0
+    },
+    "0.9": {
+      "paraphrase_hit_rate": 0.1667,
+      "paraphrase_hits": 4,
+      "paraphrase_wrong_hits": 0,
+      "near_miss_false_hit_rate": 0.0,
+      "near_miss_false_hits": 0,
+      "unrelated_false_hit_rate": 0.0,
+      "unrelated_false_hits": 0
+    }
+  },
+  "threshold_0.60": {
+    "paraphrase_hit_rate": 0.8333,
+    "near_miss_false_hit_rate": 0.0833,
+    "unrelated_false_hit_rate": 0.0
+  },
+  "staleness": {
+    "volatile_ttl_s": 2,
+    "events": [
+      {
+        "step": "1. first ask",
+        "outcome": "miss -> LLM",
+        "answer": "The Growth plan costs $79 per month."
+      },
+      {
+        "step": "2. paraphrase, price unchanged",
+        "outcome": "semantic hit",
+        "answer": "The Growth plan costs $79 per month."
+      },
+      {
+        "step": "3. world changes",
+        "outcome": "mock LLM: Growth price $79 -> $99",
+        "answer": null
+      },
+      {
+        "step": "4. paraphrase inside volatile TTL (stale $79 served)",
+        "outcome": "semantic hit",
+        "answer": "The Growth plan costs $79 per month."
+      },
+      {
+        "step": "5. paraphrase after volatile TTL expired",
+        "outcome": "miss -> LLM",
+        "answer": "The Growth plan costs $99 per month."
+      },
+      {
+        "step": "6. paraphrase again (fresh $99 cached)",
+        "outcome": "exact hit",
+        "answer": "The Growth plan costs $99 per month."
+      },
+      {
+        "step": "7. non-volatile entry cached before the wait",
+        "outcome": "miss -> LLM",
+        "answer": "Go to Settings > Billing > Cancel subscription. Your plan stays active until the end of the billing period."
+      },
+      {
+        "step": "8. non-volatile paraphrase after the wait (still cached)",
+        "outcome": "exact hit",
+        "answer": "Go to Settings > Billing > Cancel subscription. Your plan stays active until the end of the billing period."
+      }
+    ]
+  }
+}

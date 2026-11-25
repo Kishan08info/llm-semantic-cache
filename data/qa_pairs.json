@@ -1,0 +1,125 @@
+{
+  "corpus": "Northwind Analytics \u2014 fictional SaaS support knowledge base (SYNTHETIC)",
+  "pairs": [
+    {
+      "answer": "The Starter plan costs $29 per month.",
+      "id": "q01",
+      "question": "What is the monthly price of the Starter plan?"
+    },
+    {
+      "answer": "The Growth plan costs $79 per month.",
+      "id": "q02",
+      "question": "What is the monthly price of the Growth plan?"
+    },
+    {
+      "answer": "The Pro plan costs $149 per month.",
+      "id": "q03",
+      "question": "What is the monthly price of the Pro plan?"
+    },
+    {
+      "answer": "Enterprise pricing is custom \u2014 contact sales for a quote.",
+      "id": "q04",
+      "question": "How much does the Enterprise plan cost?"
+    },
+    {
+      "answer": "The Starter plan allows 1,000 API requests per day.",
+      "id": "q05",
+      "question": "What is the API rate limit on the Starter plan?"
+    },
+    {
+      "answer": "The Pro plan allows 10,000 API requests per day.",
+      "id": "q06",
+      "question": "What is the API rate limit on the Pro plan?"
+    },
+    {
+      "answer": "Go to Settings > Billing > Cancel subscription. Your plan stays active until the end of the billing period.",
+      "id": "q07",
+      "question": "How do I cancel my subscription?"
+    },
+    {
+      "answer": "Go to Settings > Billing > Change plan and pick the new plan. The upgrade applies immediately and you are billed pro-rata.",
+      "id": "q08",
+      "question": "How do I upgrade my plan?"
+    },
+    {
+      "answer": "We offer a full refund within 14 days of purchase, no questions asked.",
+      "id": "q09",
+      "question": "What is the refund policy?"
+    },
+    {
+      "answer": "The free trial lasts 14 days and includes all Growth plan features.",
+      "id": "q10",
+      "question": "How long is the free trial?"
+    },
+    {
+      "answer": "The Starter plan includes 3 team seats.",
+      "id": "q11",
+      "question": "How many team seats does the Starter plan include?"
+    },
+    {
+      "answer": "The Pro plan includes 25 team seats.",
+      "id": "q12",
+      "question": "How many team seats does the Pro plan include?"
+    },
+    {
+      "answer": "Yes, SSO with SAML is available on the Pro and Enterprise plans.",
+      "id": "q13",
+      "question": "Is SSO with SAML available?"
+    },
+    {
+      "answer": "Starter support responds within 48 hours on business days.",
+      "id": "q14",
+      "question": "How fast is support on the Starter plan?"
+    },
+    {
+      "answer": "Pro support responds within 4 hours, 24/7.",
+      "id": "q15",
+      "question": "How fast is support on the Pro plan?"
+    },
+    {
+      "answer": "Go to Settings > Data > Export to download a CSV export of your data.",
+      "id": "q16",
+      "question": "How do I export my data?"
+    },
+    {
+      "answer": "Annual billing gives you a 20% discount versus paying monthly.",
+      "id": "q17",
+      "question": "What is the annual billing discount?"
+    },
+    {
+      "answer": "Pro and Enterprise plans carry a 99.9% uptime SLA.",
+      "id": "q18",
+      "question": "What is the uptime SLA?"
+    },
+    {
+      "answer": "Your data is hosted in the US region by default; an EU region is available on Enterprise.",
+      "id": "q19",
+      "question": "Where is my data hosted?"
+    },
+    {
+      "answer": "Click 'Forgot password' on the sign-in page and follow the email link to set a new password.",
+      "id": "q20",
+      "question": "How do I reset my password?"
+    },
+    {
+      "answer": "Audit logs are available on the Enterprise plan only.",
+      "id": "q21",
+      "question": "Are audit logs available?"
+    },
+    {
+      "answer": "We keep your data for 90 days after cancellation, then delete it permanently.",
+      "id": "q22",
+      "question": "How long is data kept after I cancel?"
+    },
+    {
+      "answer": "No \u2014 all plans are month-to-month with no minimum contract term.",
+      "id": "q23",
+      "question": "Is there a minimum contract term?"
+    },
+    {
+      "answer": "Yes, Northwind is SOC 2 Type II certified; the report is available under NDA.",
+      "id": "q24",
+      "question": "Is Northwind SOC 2 compliant?"
+    }
+  ]
+}

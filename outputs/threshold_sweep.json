@@ -1,0 +1,80 @@
+{
+  "thresholds": [
+    {
+      "threshold": 0.6,
+      "paraphrase_hit_rate": 0.8333,
+      "paraphrase_hits": 20,
+      "paraphrase_wrong_hits": 0,
+      "paraphrase_total": 24,
+      "near_miss_false_hit_rate": 0.0833,
+      "near_miss_false_hits": 1,
+      "near_miss_total": 12,
+      "near_miss_false_hit_detail": [
+        {
+          "question": "What is the annual price of the Starter plan?",
+          "served": "What is the monthly price of the Starter plan?",
+          "similarity": 0.621
+        }
+      ],
+      "unrelated_false_hit_rate": 0.0,
+      "unrelated_false_hits": 0,
+      "unrelated_total": 12
+    },
+    {
+      "threshold": 0.7,
+      "paraphrase_hit_rate": 0.4583,
+      "paraphrase_hits": 11,
+      "paraphrase_wrong_hits": 0,
+      "paraphrase_total": 24,
+      "near_miss_false_hit_rate": 0.0,
+      "near_miss_false_hits": 0,
+      "near_miss_total": 12,
+      "near_miss_false_hit_detail": [],
+      "unrelated_false_hit_rate": 0.0,
+      "unrelated_false_hits": 0,
+      "unrelated_total": 12
+    },
+    {
+      "threshold": 0.8,
+      "paraphrase_hit_rate": 0.2917,
+      "paraphrase_hits": 7,
+      "paraphrase_wrong_hits": 0,
+      "paraphrase_total": 24,
+      "near_miss_false_hit_rate": 0.0,
+      "near_miss_false_hits": 0,
+      "near_miss_total": 12,
+      "near_miss_false_hit_detail": [],
+      "unrelated_false_hit_rate": 0.0,
+      "unrelated_false_hits": 0,
+      "unrelated_total": 12
+    },
+    {
+      "threshold": 0.85,
+      "paraphrase_hit_rate": 0.2917,
+      "paraphrase_hits": 7,
+      "paraphrase_wrong_hits": 0,
+      "paraphrase_total": 24,
+      "near_miss_false_hit_rate": 0.0,
+      "near_miss_false_hits": 0,
+      "near_miss_total": 12,
+      "near_miss_false_hit_detail": [],
+      "unrelated_false_hit_rate": 0.0,
+      "unrelated_false_hits": 0,
+      "unrelated_total": 12
+    },
+    {
+      "threshold": 0.9,
+      "paraphrase_hit_rate": 0.1667,
+      "paraphrase_hits": 4,
+      "paraphrase_wrong_hits": 0,
+      "paraphrase_total": 24,
+      "near_miss_false_hit_rate": 0.0,
+      "near_miss_false_hits": 0,
+      "near_miss_total": 12,
+      "near_miss_false_hit_detail": [],
+      "unrelated_false_hit_rate": 0.0,
+      "unrelated_false_hits": 0,
+      "unrelated_total": 12
+    }
+  ]
+}
